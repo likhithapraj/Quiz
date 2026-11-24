@@ -1,0 +1,13 @@
+{
+  "name": "quiz-arena",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A timed college quiz competition with server-validated speed bonuses.",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

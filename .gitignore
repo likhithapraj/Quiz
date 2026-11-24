@@ -1,0 +1,4 @@
+node_modules/
+quiz-arena.sqlite
+quiz-arena.sqlite-shm
+quiz-arena.sqlite-wal

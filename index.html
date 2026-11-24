@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090d1d" />
+    <meta
+      name="description"
+      content="Think fast, answer smart, and compete for the top spot in Quiz Arena."
+    />
+    <title>Quiz Arena — Think Fast. Answer Smart.</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Quiz Arena home" data-home>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M16 3.5 28 10v12L16 28.5 4 22V10L16 3.5Z" stroke="currentColor" stroke-width="1.7" />
+            <path d="m12.2 10.5 8.3 5.2-8.3 5.8v-11Z" fill="currentColor" />
+          </svg>
+        </span>
+        <span>QUIZ <strong>ARENA</strong></span>
+      </a>
+      <div class="header-right">
+        <span class="live-pill"><span></span> LIVE COMPETITION</span>
+        <span class="header-divider"></span>
+        <span class="header-edition">COLLEGE EDITION <span>·</span> 2026</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="screen welcome-screen is-active" id="welcome" aria-labelledby="welcome-title">
+        <div class="welcome-layout">
+          <div class="welcome-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> TECHSPARK PRESENTS</div>
+            <h1 id="welcome-title">QUIZ<br /><span>ARENA</span><span class="title-period">.</span></h1>
+            <p class="tagline">Think Fast. Answer Smart. <span>Win Big!</span></p>
+            <p class="welcome-description">
+              One stage. 50 questions.<br class="desktop-break" />
+              Challenge your knowledge and climb the leaderboard.
+            </p>
+            <p class="form-error" id="app-error" role="alert" hidden></p>
+            <button class="button button-primary button-start" id="start-button">
+              <span>Enter the arena</span>
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
+            <div class="welcome-meta">
+              <span>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5" /><path d="M10 5.5V10l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+                30 minutes
+              </span>
+              <i></i>
+              <span>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.5 12.3 7l5 .7-3.7 3.6.9 5.1-4.5-2.4-4.5 2.4.9-5.1-3.7-3.6 5-.7L10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" /></svg>
+                50 questions
+              </span>
+            </div>
+          </div>
+          <div class="welcome-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orbit orbit-three"></div>
+            <div class="art-glow"></div>
+            <div class="art-ring"><div class="art-ring-inner"></div></div>
+            <div class="art-core">
+              <div class="art-core-content"><span>CRYPTIC CLUE</span><small>1st round</small></div>
+              <i></i>
+            </div>
+            <div class="float-card float-card-top"><span class="float-icon">✦</span><div><strong>Knowledge</strong><small>is your superpower</small></div></div>
+            <div class="float-card float-card-bottom"><span class="float-check">✓</span><div><strong>Ready to compete?</strong><small>Your arena awaits</small></div></div>
+            <span class="spark spark-one">✦</span><span class="spark spark-two">✦</span><span class="spark spark-three">·</span>
+          </div>
+        </div>
+        <div class="welcome-footer">
+          <span>MADE FOR THE CURIOUS</span>
+          <span>FOCUS <b>·</b> THINK <b>·</b> CONQUER</span>
+          <span>SCROLL LESS. KNOW MORE.</span>
+        </div>
+      </section>
+
+      <section class="screen form-screen" id="registration" aria-labelledby="registration-title" aria-hidden="true">
+        <div class="narrow-layout">
+          <button class="back-link" type="button" data-back="welcome">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 10H4m5 5-5-5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            Back to welcome
+          </button>
+          <div class="form-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7 8v-1a7 7 0 0 0-14 0v1h14Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> BEFORE THE FIRST QUESTION</div>
+            <h2 id="registration-title">Your name,<br /><span>your legacy.</span></h2>
+            <p class="form-intro">Tell us who’s taking the stage. The spotlight is yours.</p>
+            <form id="registration-form">
+              <label for="participant-name">Participant name <span>*</span></label>
+              <input id="participant-name" name="participantName" type="text" placeholder="e.g. Alex Morgan" autocomplete="name" required maxlength="60" />
+              <label for="college-name">College name <span>*</span></label>
+              <input id="college-name" name="collegeName" type="text" placeholder="e.g. Northstar University" required maxlength="100" />
+              <label for="team-name">Team name <small>OPTIONAL</small></label>
+              <input id="team-name" name="teamName" type="text" placeholder="e.g. The Brainiacs" maxlength="60" />
+              <p class="form-error" id="form-error" role="alert" hidden></p>
+              <button class="button button-primary form-submit" type="submit">
+                <span>Start competition</span>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </button>
+            </form>
+            <div class="form-secure"><span>✦</span> Your details appear on the competition leaderboard</div>
+          </div>
+          <div class="form-footer"><span>QUIZ ARENA</span><span>50 QUESTIONS <i>·</i> 30 MINUTES</span></div>
+        </div>
+      </section>
+
+      <section class="screen quiz-screen" id="quiz" aria-labelledby="quiz-heading" aria-hidden="true">
+        <div class="quiz-shell">
+          <div class="quiz-topline">
+            <div><span class="quiz-kicker">COLLEGE QUIZ <i>·</i> ROUND 01</span><span class="quiz-player" id="quiz-player"></span></div>
+            <div class="timer" id="timer" aria-live="polite">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7.3" stroke="currentColor" stroke-width="1.5" /><path d="M10 5.5V10l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+              <span id="timer-value">30:00</span>
+              <small>REMAINING</small>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+            <span id="progress-label">01 <i>/</i> 50</span>
+          </div>
+          <div class="quiz-layout">
+            <section class="question-panel" aria-live="polite">
+              <div class="question-meta">
+                <span id="question-category">GENERAL KNOWLEDGE</span>
+                <span class="question-clock">QUESTION TIME <strong id="question-time-value">0.0s</strong></span>
+                <span class="points-badge">UP TO 6 PTS</span>
+              </div>
+              <div class="question-count">QUESTION <strong id="question-number">01</strong><span> / 50</span></div>
+              <h1 id="quiz-heading" class="question-text"></h1>
+              <p class="choose-hint">CHOOSE ONE ANSWER</p>
+              <div class="options-list" id="options-list"></div>
+              <p class="form-error quiz-error" id="quiz-error" role="alert" hidden></p>
+              <div class="question-actions">
+                <button class="button button-secondary" id="previous-button" type="button">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 10H4m5 5-5-5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  Previous
+                </button>
+                <button class="button button-primary next-button" id="next-button" type="button">
+                  <span>Next question</span>
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </button>
+                <button class="button button-submit" id="submit-button" type="button" hidden>Submit quiz <span>↗</span></button>
+              </div>
+            </section>
+            <aside class="question-nav">
+              <div class="nav-heading"><div><strong>Question navigator</strong><span>Jump to any question</span></div><span class="nav-count" id="answered-count">0/50</span></div>
+              <div class="question-grid" id="question-grid" aria-label="Question navigation"></div>
+              <div class="nav-legend">
+                <span><i class="legend-current"></i> Current</span>
+                <span><i class="legend-answered"></i> Answered</span>
+                <span><i class="legend-unanswered"></i> Unanswered</span>
+              </div>
+              <div class="nav-tip"><span>✦</span><p>You can revisit any question before submitting your answers.</p></div>
+            </aside>
+          </div>
+          <div class="quiz-bottom"><span>QUIZ ARENA <i>·</i> COLLEGE EDITION</span><span>STAY SHARP. YOU’VE GOT THIS.</span></div>
+        </div>
+      </section>
+
+      <section class="screen results-screen" id="results" aria-labelledby="results-title" aria-hidden="true">
+        <div class="results-card">
+          <div class="results-confetti" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>·</span><span>✧</span><span>✦</span></div>
+          <div class="results-icon" aria-hidden="true"><span>✦</span></div>
+          <div class="eyebrow"><span class="eyebrow-line"></span> THE ARENA HAS SPOKEN <span class="eyebrow-line"></span></div>
+          <h1 id="results-title">Well played,<br /><span id="result-name">champion</span><span class="title-period">.</span></h1>
+          <p class="results-message" id="performance-message"></p>
+          <div class="score-card">
+            <span class="score-label">YOUR FINAL SCORE</span>
+            <div class="score-value"><strong id="score-value">0</strong><span> / 300</span></div>
+            <div class="score-breakdown">
+              <span>Base <strong id="base-score">0</strong><small> / 50</small></span>
+              <span>Speed bonus <strong id="bonus-score">0</strong><small> / 250</small></span>
+            </div>
+            <div class="score-track"><div class="score-fill" id="score-fill"></div></div>
+            <span class="score-percent" id="score-percent">0% accuracy</span>
+          </div>
+          <div class="result-stats">
+            <div class="stat-box"><span class="stat-icon stat-correct">✓</span><strong id="correct-count">0</strong><small>CORRECT</small></div>
+            <div class="stat-box"><span class="stat-icon stat-incorrect">×</span><strong id="incorrect-count">0</strong><small>INCORRECT</small></div>
+            <div class="stat-box"><span class="stat-icon stat-time">◷</span><strong id="time-taken">00:00</strong><small>TIME TAKEN</small></div>
+          </div>
+          <section class="leaderboard" aria-labelledby="leaderboard-title">
+            <div class="leaderboard-heading">
+              <div><span class="eyebrow-line"></span><h2 id="leaderboard-title">Leaderboard</h2></div>
+              <span>TOP 10</span>
+            </div>
+            <p class="leaderboard-note">Ranked by total points, then fastest completion time.</p>
+            <div class="leaderboard-list" id="leaderboard-list" aria-live="polite"></div>
+          </section>
+          <div class="result-identity"><span id="result-college"></span><span id="result-team"></span></div>
+          <button class="button button-primary restart-button" id="restart-button" type="button">
+            <span>Play again</span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.5 7A7 7 0 0 0 4 6l-1.5 1.5M3 4v3.5h3.5M3.5 13A7 7 0 0 0 16 14l1.5-1.5M17 16v-3.5h-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+        </div>
+        <div class="results-footer">QUIZ ARENA <i>·</i> THE NEXT CHAMPION COULD BE YOU</div>
+      </section>
+    </main>
+  </body>
+</html>
